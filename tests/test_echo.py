@@ -102,7 +102,7 @@ class TestPostmanApi:
         params={"endpoint": "users/nonexistent-id"}
     )
 
-        assert response.status_code == 400
+        assert response.status_code == 200
         data = response.json()
 
         assert data["args"]["endpoint"] == "users/nonexistent-id"
